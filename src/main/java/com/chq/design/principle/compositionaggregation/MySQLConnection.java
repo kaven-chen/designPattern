@@ -1,8 +1,5 @@
 package com.chq.design.principle.compositionaggregation;
 
-/**
- * Created by geely
- */
 public class MySQLConnection extends DBConnection {
     @Override
     public String getConnection() {
