@@ -5,7 +5,7 @@ package com.chq.design.pattern.creational.simplefactory;
  */
 public class BMWCar extends Car {
     @Override
-    public void produce() {
-        System.out.println("生产宝马汽车");
+    public void run() {
+        System.out.println("宝马在路上跑");
     }
 }

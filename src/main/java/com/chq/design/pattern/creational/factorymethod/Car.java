@@ -1,7 +1,7 @@
-package com.chq.design.pattern.creational.simplefactory;
+package com.chq.design.pattern.creational.factorymethod;
 
 /**
- *
+ * 汽车
  */
 public abstract class Car {
 
