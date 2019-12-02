@@ -11,6 +11,10 @@ package com.chq.design.pattern.creational.singleton;
 public class StaticInnerClassSingleton {
 
     private StaticInnerClassSingleton() {
+        // 防止反射调用
+        if (Inner.staticInnerClassSingleton != null) {
+            throw new RuntimeException("单例构造器禁止反射调用");
+        }
     }
     /**
      * 声明为private
