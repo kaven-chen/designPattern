@@ -1,0 +1,48 @@
+package com.chq.design;
+
+// enum枚举反编译后代码（使用反编译工具jad编译出来的）
+/**
+ * enum最终也会编译成class，且声明为final，不能被继承
+ *
+ */
+public final class EnumInstance extends Enum {
+
+    // INSTANCE编译成了final static类型的属性
+    public static final EnumInstance INSTANCE;
+    private Object data;
+    private static final EnumInstance $VALUES[];
+
+    // INSTANCE是在static块中初始化，即当类加载的时候就已经完成初始化
+    // 和饿汉单例模式非常相似，也是线程安全的
+    static {
+        INSTANCE = new EnumInstance("INSTANCE", 0);
+        $VALUES = (new EnumInstance[]{
+                INSTANCE
+        });
+    }
+    public static EnumInstance[] values() {
+        return (EnumInstance[]) $VALUES.clone();
+    }
+
+    public static EnumInstance valueOf(String name) {
+        return (EnumInstance) Enum.valueOf(com.chq.design.pattern.creational.singleton.EnumInstance, name);
+    }
+    // 构造器私有化，非常符合单例模式特性
+    private EnumInstance(String s, int i) {
+        super(s, i);
+    }
+
+    public Object getData() {
+        return data;
+    }
+
+    public void setData(Object data) {
+        this.data = data;
+    }
+
+    public EnumInstance getInstance() {
+        return INSTANCE;
+    }
+
+
+}
