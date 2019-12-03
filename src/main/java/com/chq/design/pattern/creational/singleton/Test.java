@@ -12,7 +12,7 @@ public class Test {
     public static void main(String[] args) {
 //        LazySingleton lazySingleton = LazySingleton.getInstance();
 //        System.out.println(lazySingleton);
-        /** 多线程debug */
+        // 多线程debug
 //        Thread t1 = new Thread(new T());
 //        Thread t2 = new Thread(new T());
 //        t1.start();
@@ -24,5 +24,14 @@ public class Test {
         enumInstance.enumMethodTest();
         System.out.println(enumInstance.getData());
 
+        // threadLocal单例测试,主线程获取到的始终是同一个对象
+        System.out.println("main-thread-" + ThreadLocalSingleton.getInstance());
+        System.out.println("main-thread-" + ThreadLocalSingleton.getInstance());
+        System.out.println("main-thread-" + ThreadLocalSingleton.getInstance());
+        System.out.println("main-thread-" + ThreadLocalSingleton.getInstance());
+        Thread t1 = new Thread(new T());
+        Thread t2 = new Thread(new T());
+        t1.start();
+        t2.start();
     }
 }

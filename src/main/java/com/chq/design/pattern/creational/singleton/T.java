@@ -9,7 +9,8 @@ public class T implements Runnable {
     @Override
     public void run() {
 //        LazySingleton singleton = LazySingleton.getInstance();
-        StaticInnerClassSingleton singleton = StaticInnerClassSingleton.getInstance();
+//        StaticInnerClassSingleton singleton = StaticInnerClassSingleton.getInstance();
+        ThreadLocalSingleton singleton = ThreadLocalSingleton.getInstance();
         System.out.println(singleton);
     }
 }
