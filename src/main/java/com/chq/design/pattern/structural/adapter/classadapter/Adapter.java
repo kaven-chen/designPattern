@@ -7,7 +7,7 @@ package com.chq.design.pattern.structural.adapter.classadapter;
  */
 public class Adapter extends Adaptee implements Target {
     @Override
-    public void reqeust() {
+    public void request() {
         // do something...
         super.adapterRequest();
     }

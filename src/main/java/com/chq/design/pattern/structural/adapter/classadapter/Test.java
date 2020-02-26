@@ -11,6 +11,6 @@ package com.chq.design.pattern.structural.adapter.classadapter;
 public class Test {
     public static void main(String[] args) {
         Target target = new Adapter();
-        target.reqeust();
+        target.request();
     }
 }

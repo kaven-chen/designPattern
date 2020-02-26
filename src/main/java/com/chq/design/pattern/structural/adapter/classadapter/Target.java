@@ -6,5 +6,5 @@ package com.chq.design.pattern.structural.adapter.classadapter;
  * @Created by ChenQiang
  */
 public interface Target {
-    void reqeust();
+    void request();
 }
