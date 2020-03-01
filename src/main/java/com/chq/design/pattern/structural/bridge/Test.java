@@ -20,7 +20,8 @@ import com.chq.design.pattern.creational.prototype.abstractprototype.A;
  *  代码场景：
  *      中国有很多银行，有中国农业银行和中国工商银行；银行账号又有定期账号和活期账号，
  *      现将账号和银行作为两个可以独立变化的维度来实现桥接模式
- *
+ *  源码解析：
+ *      jdbc里面的 Driver:
  * @Date 2020/2/27 21:43
  * @Created by ChenQiang
  */
