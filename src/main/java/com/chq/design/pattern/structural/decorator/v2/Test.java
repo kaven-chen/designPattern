@@ -22,10 +22,10 @@ public class Test {
         // 假如顾客顾客需要加3个鸡蛋，2个火腿，使用这种方式得继承很多次
         AbstractBattercake battercake;
         battercake = new EggDecorator(new Battercake());
-//        battercake = new EggDecorator(battercake);
-//        battercake = new EggDecorator(battercake);
-//        battercake = new SausageDecorator(battercake);
-//        battercake = new SausageDecorator(battercake);
+        battercake = new EggDecorator(battercake);
+        battercake = new EggDecorator(battercake);
+        battercake = new SausageDecorator(battercake);
+        battercake = new SausageDecorator(battercake);
         System.out.println(battercake.getDesc() + " 价格：" + battercake.getPrice());
 
         /*
@@ -34,15 +34,15 @@ public class Test {
          * BufferedInputStream就是一个装饰者，从构造对象的过程可以清晰的看出来；
          * 它继承自FilterInputStream，所以FilterInputStream就是所有装饰者共同的父类，它也是InputStream的子类
          * */
-        InputStream inputStream = new FileInputStream(new File("G:\\workspace\\localGithubProjects\\designPattern\\src\\main\\resources\\test.txt"));
-        BufferedInputStream bufIns = new BufferedInputStream(inputStream);
-
-        byte[] bytes = new byte[1024];
-        int len = bufIns.read(bytes);
-        while (len != -1) {
-            System.out.println(new String(bytes));
-            len = bufIns.read();
-        }
+//        InputStream inputStream = new FileInputStream(new File("G:\\workspace\\localGithubProjects\\designPattern\\src\\main\\resources\\test.txt"));
+//        BufferedInputStream bufIns = new BufferedInputStream(inputStream);
+//
+//        byte[] bytes = new byte[1024];
+//        int len = bufIns.read(bytes);
+//        while (len != -1) {
+//            System.out.println(new String(bytes));
+//            len = bufIns.read();
+//        }
 
     }
 }
