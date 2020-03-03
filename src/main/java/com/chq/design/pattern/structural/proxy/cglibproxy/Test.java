@@ -11,7 +11,7 @@ import com.chq.design.pattern.structural.proxy.OrderServiceImpl;
  */
 public class Test {
     public static void main(String[] args) {
-        // 测试cglib动态代理,可以代理类和接口
+        // 测试cglib动态代理,可以代理类和接口 3/2
         IOrderService orderService = (IOrderService) new CgLibOrderServiceDynamicProxy().newInstance(new OrderServiceImpl());
         Order order = new Order(new Object(), 1);
         orderService.saveOrder(order);
