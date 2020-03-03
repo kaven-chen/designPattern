@@ -8,6 +8,10 @@ package com.chq.design.pattern.behavioral.iterator;
  *  使用场景：
  *      1.访问一个集合对象的内容而无需暴露它的内部表示
  *      2.为遍历不同的集合提供一个接口
+ *
+ *  源码解析：
+ *      java.util.Iterator提供了遍历集合的统一接口
+ *      List ArrayList
  * @Date 2020/3/2 22:04
  * @Created by ChenQiang
  */
